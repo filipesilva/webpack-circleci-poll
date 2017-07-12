@@ -1,0 +1,18 @@
+{
+  "name": "webpack-circleci-poll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "concurrently \"npm run webpack\" \"npm run sleep\" --kill-others --success first",
+    "webpack": "webpack",
+    "sleep": "sleep 20"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.5.0",
+    "webpack": "^3.2.0"
+  }
+}
